@@ -1,0 +1,12 @@
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+}
+
+.header_nav {
+  display: flex;
+  justify-content: space-between;
+}
