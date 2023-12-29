@@ -1,4 +1,6 @@
 import "./App.css";
+import Header from "./Component/Header/Header";
+import HeadBand from "./Component/HeadBand/HeadBand";
 import useSWR from "swr";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
@@ -15,7 +17,10 @@ const App = () => {
 
   return (
     <>
-      <main></main>
+      <Header />
+      <main>
+        <HeadBand />
+      </main>
     </>
   );
 };
