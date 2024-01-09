@@ -1,6 +1,7 @@
 import "./Activity.css";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import CustomTooltip from "../CustomTooltip/CustomTooltip.tsx";
+import CustomTooltip from "../Custom/CustomTooltip.tsx";
+import CustomAxisTick from "../Custom/CustomAxisTick.tsx";
 import useSWR from "swr";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
@@ -25,6 +26,8 @@ const Activity = () => {
         alignItems: "center"
     }
 
+    console.log(data.data.sessions.length)
+
     return (
         <div>
             <BarChart
@@ -39,7 +42,7 @@ const Activity = () => {
                 }}
             >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey={"day"} />
+                <XAxis dataKey={"day"} tick={CustomAxisTick} />
                 <YAxis orientation="right" />
                 <Tooltip wrapperStyle={{...styleTooltip}} content={<CustomTooltip />} />
                 <Legend />
