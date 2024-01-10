@@ -1,9 +1,10 @@
 
-const CustomAxisTick = ({ payload }) => {
-    let path = payload.value[payload.value.length -1];
-    console.log(path)
+const CustomAxisTick = ({ x, y, payload }) => {
+
+    let date: string = payload.value[payload.value.length -1];
+
     return (
-        <p>{path}</p>
+        <text x={x} y={y} textAnchor="middle" dy={+20}>{date}</text>
     );
 };
 

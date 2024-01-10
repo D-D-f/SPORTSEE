@@ -42,7 +42,7 @@ const Activity = () => {
                 }}
             >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey={"day"} tick={CustomAxisTick} />
+                <XAxis dataKey={"day"} tick={<CustomAxisTick />} />
                 <YAxis orientation="right" />
                 <Tooltip wrapperStyle={{...styleTooltip}} content={<CustomTooltip />} />
                 <Legend />
