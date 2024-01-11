@@ -40,15 +40,15 @@ const Activity = () => {
                     left: 20,
                     bottom: 5
                 }}
+                barGap={10}
             >
-                <CartesianGrid strokeDasharray="3 3" />
+                <CartesianGrid strokeDasharray="2 0" />
                 <XAxis dataKey={"day"} tick={<CustomAxisTick />} />
-                <YAxis orientation="right" />
+                <YAxis orientation="right" domain={[0, 'dataMax']}  />
                 <Tooltip wrapperStyle={{...styleTooltip}} content={<CustomTooltip />} />
                 <Legend />
-
-                <Bar dataKey="kilogram" fill="#282D30" barSize={10} />
-                <Bar dataKey="calories" fill="#E60000" barSize={10} />
+                <Bar dataKey="kilogram" fill="#282D30" barSize={10} radius={[20,20,0,0]} />
+                <Bar dataKey="calories" fill="#E60000" barSize={10} radius={[20,20,0,0]} />
             </BarChart>
         </div>
     )
