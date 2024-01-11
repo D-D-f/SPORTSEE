@@ -1,9 +1,9 @@
 const CustomLegend = ({payload}) => {
     const li = payload.map((entry, index) => {
-        return <li key={`item ${index}`}>{entry.dataKey === "kilogram" ? `Poids (kg)` : `Calories brûlées (kcal)`}</li>
+        return entry.dataKey === "kilogram" ? <li key={index} className={"round"}>Poids (kg)</li> : <li key={index} className={"square"} style={{listStyle: "square"}}>Calories brûlées (kcal)</li>
     })
     return (
-        <ul>
+        <ul className={"ul_legend"}>
             {li}
         </ul>
     )
