@@ -2,6 +2,7 @@ import "./Activity.css";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import CustomTooltip from "../Custom/CustomTooltip.tsx";
 import CustomAxisTick from "../Custom/CustomAxisTick.tsx";
+import CustomLegend from "../Custom/CustomLegend.tsx";
 import useSWR from "swr";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
@@ -42,13 +43,13 @@ const Activity = () => {
                 }}
                 barGap={10}
             >
-                <CartesianGrid strokeDasharray="2 0" />
+                <CartesianGrid strokeDasharray="3 3" verticalPoints={[0]}  />
                 <XAxis dataKey={"day"} tick={<CustomAxisTick />} />
-                <YAxis orientation="right" domain={[0, 'dataMax']}  />
+                <YAxis orientation="right"  />
                 <Tooltip wrapperStyle={{...styleTooltip}} content={<CustomTooltip />} />
-                <Legend />
-                <Bar dataKey="kilogram" fill="#282D30" barSize={10} radius={[20,20,0,0]} />
-                <Bar dataKey="calories" fill="#E60000" barSize={10} radius={[20,20,0,0]} />
+                <Legend content={<CustomLegend />}/>
+                <Bar dataKey="kilogram" fill="#282D30" barSize={10} radius={[20, 20, 0, 0]} />
+                <Bar dataKey="calories" fill="#E60000" barSize={10} radius={[20, 20, 0, 0]} />
             </BarChart>
         </div>
     )
