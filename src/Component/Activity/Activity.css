@@ -1,13 +1,15 @@
-.square::marker, .round::marker {
-    font-size: 25px;
+.marker::marker {
+    color: #E60000;
 }
 
-
-.square::marker {
-    color: #E60000;
+.BarChart {
+    background-color: #00000005;
+    width: max-content;
+    padding: 40px;
 }
 
 .ul_legend {
     display: flex;
-    gap: 50px;
+    justify-content: flex-end;
+    gap: 30px;
 }

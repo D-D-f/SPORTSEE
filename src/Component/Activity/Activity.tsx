@@ -1,8 +1,7 @@
 import "./Activity.css";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Text} from 'recharts';
 import CustomTooltip from "../Custom/CustomTooltip.tsx";
 import CustomAxisTick from "../Custom/CustomAxisTick.tsx";
-import CustomLegend from "../Custom/CustomLegend.tsx";
 import useSWR from "swr";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
@@ -27,29 +26,37 @@ const Activity = () => {
         alignItems: "center"
     }
 
-    console.log(data.data.sessions.length)
-
     return (
-        <div>
+        <div className={"BarChart"}>
             <BarChart
-                width={700}
-                height={300}
+                width={735}
+                height={320}
                 data={data.data.sessions}
                 margin={{
-                    top: 5,
+                    top: 20,
                     right: 30,
                     left: 20,
                     bottom: 5
                 }}
                 barGap={10}
             >
-                <CartesianGrid strokeDasharray="3 3" verticalPoints={[0]}  />
-                <XAxis dataKey={"day"} tick={<CustomAxisTick />} />
-                <YAxis orientation="right"  />
-                <Tooltip wrapperStyle={{...styleTooltip}} content={<CustomTooltip />} />
-                <Legend content={<CustomLegend />}/>
-                <Bar dataKey="kilogram" fill="#282D30" barSize={10} radius={[20, 20, 0, 0]} />
-                <Bar dataKey="calories" fill="#E60000" barSize={10} radius={[20, 20, 0, 0]} />
+
+                <text
+                    textAnchor="start"
+                    dominantBaseline="hanging"
+                    style={{fontWeight: "bold"}}
+                >
+                    Activité quotidienne
+                </text>
+                <Legend verticalAlign='top' align='right' iconType='circle' wrapperStyle={{ marginTop: '-23px' }} formatter={(value, entry, index) => <span className='text-color'>{value}</span>} />
+                <CartesianGrid strokeDasharray="3 3" vertical={false}/>
+                <XAxis dataKey='day' tickLine={false} axisLine={false} tick={<CustomAxisTick />} />
+                <XAxis dataKey='calories' type='number' tickLine={false} axisLine={false} />
+                <YAxis dataKey='kilogram' type='number' tickLine={false} orientation='right' domain={['dataMin - 1', 'dataMax + 1']} />
+                <YAxis dataKey='calories' type='number' yAxisId='calorie' hide />
+                <Tooltip wrapperStyle={{...styleTooltip}} content={<CustomTooltip/>}/>
+                <Bar name="Poids (kg)" dataKey="kilogram" fill="#282D30" barSize={10} radius={[10, 10, 0, 0]}/>
+                <Bar name="Calories brûlées (kCal)" dataKey="calories" fill="#E60000" yAxisId='calorie' barSize={10} radius={[10, 10, 0, 0]} />
             </BarChart>
         </div>
     )
