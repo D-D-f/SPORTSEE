@@ -6,10 +6,15 @@
     background-color: #00000005;
     width: max-content;
     padding: 40px;
+    color: #74798C;
 }
 
 .ul_legend {
     display: flex;
     justify-content: flex-end;
     gap: 30px;
+}
+
+.text-color {
+    color: #74798C;
 }

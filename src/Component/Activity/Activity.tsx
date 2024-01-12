@@ -33,8 +33,8 @@ const Activity = () => {
                 height={320}
                 data={data.data.sessions}
                 margin={{
-                    top: 20,
-                    right: 30,
+                    top: 50,
+                    right: 20,
                     left: 20,
                     bottom: 5
                 }}
@@ -44,12 +44,12 @@ const Activity = () => {
                 <text
                     textAnchor="start"
                     dominantBaseline="hanging"
-                    style={{fontWeight: "bold"}}
+                    style={{fontWeight: "bold", color: "#74798C"}}
                 >
                     Activité quotidienne
                 </text>
                 <Legend verticalAlign='top' align='right' iconType='circle' wrapperStyle={{ marginTop: '-23px' }} formatter={(value, entry, index) => <span className='text-color'>{value}</span>} />
-                <CartesianGrid strokeDasharray="3 3" vertical={false}/>
+                <CartesianGrid strokeDasharray="3" vertical={false}  />
                 <XAxis dataKey='day' tickLine={false} axisLine={false} tick={<CustomAxisTick />} />
                 <XAxis dataKey='calories' type='number' tickLine={false} axisLine={false} />
                 <YAxis dataKey='kilogram' type='number' tickLine={false} orientation='right' domain={['dataMin - 1', 'dataMax + 1']} />
