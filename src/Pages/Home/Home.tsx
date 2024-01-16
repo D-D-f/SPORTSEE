@@ -7,8 +7,10 @@ const Home = () => {
     return (
         <div className={"Home"}>
            <Name />
-            <Activity />
-            <IconActivityScore />
+            <div className="flex_container">
+                <Activity />
+                <IconActivityScore />
+            </div>
         </div>
 
     )

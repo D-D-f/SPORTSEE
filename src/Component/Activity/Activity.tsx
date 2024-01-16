@@ -29,8 +29,8 @@ const Activity = () => {
     return (
         <div className={"BarChart"}>
             <BarChart
-                width={735}
-                height={320}
+                width={1300}
+                height={420}
                 data={data.data.sessions}
                 margin={{
                     top: 50,

@@ -1,13 +1,14 @@
 .iconCount {
     display: flex;
+    gap: 20px;
+    align-items: center;
     padding: 20px;
-    width: 30%;
+    background-color: #00000005;
 }
 
 .containerIcon {
     display: flex;
     padding: 20px;
-    margin-right: 10%;
 }
 
 .scoreCount {
