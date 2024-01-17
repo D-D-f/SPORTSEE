@@ -6,7 +6,7 @@ const Chart = () => {
     const [data] = UseCallApi('12', "activity");
 
     return (
-        <ResponsiveContainer style={{padding: 0, margin: 0}} width="100%" height="40%">
+        <ResponsiveContainer style={{paddingTop: 50, paddingLeft: 50, paddingBottom: 50, margin: 0, backgroundColor: 'var(--gray)', borderRadius: "10px"}} width="100%" height="40%">
             <BarChart
                 width={500}
                 height={300}
@@ -17,11 +17,12 @@ const Chart = () => {
                 <text
                     textAnchor="start"
                     dominantBaseline="hanging"
-                    style={{fontWeight: "bold", color: "#74798C"}}
+                    style={{fontWeight: "bold"}}
                 >
                     Activité quotidienne
                 </text>
-                <Legend verticalAlign='top' align='right' iconType='circle' wrapperStyle={{marginTop: '-23px'}}/>
+
+                <Legend verticalAlign='top' align='right' iconType='circle' wrapperStyle={{marginTop: '-33px'}}/>
                 <CartesianGrid strokeDasharray="1" vertical={false}/>
                 <XAxis dataKey="day" scale="point" padding={{left: 10, right: 10}}/>
                 <XAxis dataKey='day' tickLine={false} axisLine={false}/>

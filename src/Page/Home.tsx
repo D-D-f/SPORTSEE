@@ -11,7 +11,7 @@ import burger from "../assets/icon/cheeseburger.svg";
 const Home = () => {
     const [data] = UseCallApi("12");
     const name = data.data?.userInfos?.firstName;
-    console.log(data)
+
     return (
         <section className="Home">
             <Name name={name} />
@@ -20,10 +20,10 @@ const Home = () => {
                     <Chart />
                 </div>
                 <div className="containerCard">
-                    <CardMacronutrient link={fire} type={"Calories"} quantity={data.data?.keyData?.calorieCount} />
-                    <CardMacronutrient link={chicken} type={"Proteines"} quantity={data.data?.keyData?.proteinCount} />
-                    <CardMacronutrient link={apple} type={"Glucides"} quantity={data.data?.keyData?.carbohydrateCount} />
-                    <CardMacronutrient link={burger} type={"Lipides"} quantity={data.data?.keyData?.lipidCount} />
+                    <CardMacronutrient link={fire} type={"Calories"} quantity={data.data?.keyData?.calorieCount} color="rgba(255, 0, 0, 6.61%)" />
+                    <CardMacronutrient link={chicken} type={"Proteines"} quantity={data.data?.keyData?.proteinCount} color="#4AB8FF1A" />
+                    <CardMacronutrient link={apple} type={"Glucides"} quantity={data.data?.keyData?.carbohydrateCount} color="rgba(249, 206, 35, 6.61%)" />
+                    <CardMacronutrient link={burger} type={"Lipides"} quantity={data.data?.keyData?.lipidCount} color="#FD51811A" />
                 </div>
             </main>
         </section>

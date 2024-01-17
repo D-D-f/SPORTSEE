@@ -1,9 +1,16 @@
 .cardMacro {
     display: flex;
-    border: 1px solid red;
+    align-items: center;
+    background-color: var(--gray);
     padding: 50px;
+    border-radius: 10px;
 }
 
 .cardMacroType {
     margin-left: 20px;
+}
+
+.containerImgMacro {
+    padding: 20px;
+    border-radius: 5px;
 }
