@@ -1,0 +1,9 @@
+.cardMacro {
+    display: flex;
+    border: 1px solid red;
+    padding: 50px;
+}
+
+.cardMacroType {
+    margin-left: 20px;
+}

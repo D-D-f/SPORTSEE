@@ -1,9 +1,7 @@
-import LogoProps from "../../Interface/LogoProps";
+import logo from "../../assets/icon/logo.svg";
 
-const Logo = ({ link }: LogoProps) => {
-  return (
-    <img style={{ width: "178px", height: "60px" }} src={link} alt="logo" />
-  );
-};
+const Logo = () => {
+    return <img src={logo} alt="logo"/>
+}
 
 export default Logo;

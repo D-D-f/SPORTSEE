@@ -1,19 +1,18 @@
 import "./Header.css";
-import Logo from "../Logo/Logo";
-import ImgLogo from "../../asset/Logo/logo.svg";
+import Logo from "../Logo/Logo.tsx";
 
 const Header = () => {
-  return (
-    <header className="header">
-      <Logo link={ImgLogo} />
-      <ul>
-        <li>Accueil</li>
-        <li>Profil</li>
-        <li>Réglage</li>
-        <li>Communauté</li>
-      </ul>
-    </header>
-  );
+    return (
+        <header className="header">
+            <Logo />
+            <ul>
+                <li>Accueil</li>
+                <li>Profil</li>
+                <li>Réglage</li>
+                <li>Communauté</li>
+            </ul>
+        </header>
+    );
 };
 
 export default Header;

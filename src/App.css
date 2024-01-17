@@ -1,4 +1,5 @@
-main {
-  height: calc(100% - 91px);
-  display: flex;
+.main {
+    height: calc(100% - 91px);
+    width: 100%;
+    display: flex;
 }

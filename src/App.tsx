@@ -1,20 +1,18 @@
+import Header from "./Component/Header/Header.tsx";
+import HeadBand from "./Component/HeadBand/HeadBand.tsx";
+import Home from "./Page/Home.tsx";
 import "./App.css";
-import Header from "./Component/Header/Header";
-import HeadBand from "./Component/HeadBand/HeadBand";
-import Home from "./Pages/Home/Home.tsx";
-import IconActivityScore from "./Component/IconActivty/IconActivityScore.tsx";
-
 
 const App = () => {
   return (
-    <>
-      <Header />
-      <main>
-        <HeadBand />
-          <Home />
-      </main>
-    </>
-  );
-};
+    <div className="container">
+        <Header />
+            <main className="main">
+                <HeadBand />
+                <Home />
+            </main>
+    </div>
+  )
+}
 
-export default App;
+export default App

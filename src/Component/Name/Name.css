@@ -1,7 +1,12 @@
-.header_name h2 {
-    font-size: 48px;
+.div_name h1 span {
+    color: var(--red);
 }
 
-.header_name p {
+.div_name h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.div_name p {
     font-size: 18px;
 }
