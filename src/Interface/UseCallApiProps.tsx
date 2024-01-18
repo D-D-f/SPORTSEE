@@ -1,6 +1,6 @@
 interface UseCallApiProps {
     user: string;
-    path: string;
+    path?: string;
 }
 
 export default UseCallApiProps;

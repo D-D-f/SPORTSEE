@@ -1,8 +1,7 @@
 import useSWR from "swr";
-import UseCallApiProps from "../../Interface/UseCallApiProps.tsx";
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
-const UseCallApi = (user: UseCallApiProps, path = null) => {
+const UseCallApi = (user: string, path?: string) => {
     const apiUrl = path ? `http://localhost:3000/user/${user}/${path}` : `http://localhost:3000/user/${user}`;
 
     const { data, error, isLoading } = useSWR(

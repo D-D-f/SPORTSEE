@@ -7,6 +7,7 @@ import fire from "../assets/icon/energy.svg";
 import chicken from "../assets/icon/chicken.svg";
 import apple from "../assets/icon/apple.svg";
 import burger from "../assets/icon/cheeseburger.svg";
+import RadarChartActivity from "../Component/RadarChartActivity/RadarChartActivity.tsx";
 
 const Home = () => {
     const [data] = UseCallApi("12");
@@ -24,6 +25,9 @@ const Home = () => {
                     <CardMacronutrient link={chicken} type={"Proteines"} quantity={data.data?.keyData?.proteinCount} color="#4AB8FF1A" />
                     <CardMacronutrient link={apple} type={"Glucides"} quantity={data.data?.keyData?.carbohydrateCount} color="rgba(249, 206, 35, 6.61%)" />
                     <CardMacronutrient link={burger} type={"Lipides"} quantity={data.data?.keyData?.lipidCount} color="#FD51811A" />
+                </div>
+                <div>
+                    <RadarChartActivity />
                 </div>
             </main>
         </section>

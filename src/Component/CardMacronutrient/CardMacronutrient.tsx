@@ -1,7 +1,6 @@
 import "./CardMacronutrient.css";
 import CardMacronutrientProps from "../../Interface/CardMacronutrientProps.tsx";
 const CardMacronutrient = ({link, type, quantity, color}: CardMacronutrientProps) => {
-
     const styleMycro = {
         backgroundColor: color,
     }
@@ -12,7 +11,7 @@ const CardMacronutrient = ({link, type, quantity, color}: CardMacronutrientProps
                 <img src={link} alt="logo"/>
             </div>
             <div className="cardMacroType">
-                {type === "Calories" ? <p>{quantity}kCal<span style={{display: "block"}}>{type}</span></p> : <p>{quantity}g <span style={{display: "block"}}>{type}</span></p>}
+                {type === "Calories" ? <p style={{fontSize: "20px"}}>{quantity}kCal<span style={{display: "block", color: "#74798C", fontSize: "14px"}}>{type}</span></p> : <p style={{fontSize: "20px"}}>{quantity}g <span style={{display: "block", color: "#74798C", fontSize: "14px"}}>{type}</span></p>}
             </div>
         </article>
     )
