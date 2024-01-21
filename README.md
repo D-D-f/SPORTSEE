@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# SPORTSEE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="https://user.oc-static.com/upload/2020/08/18/15977560509272_logo%20%285%29.png">
+</p>
 
-Currently, two official plugins are available:
+## Contexte
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Vous êtes développeur web chez Les Petits Plats, une entreprise qui propose des recettes de cuisine à ses clients. L'entreprise souhaite développer une application web qui permettra à ses clients de trouver des recettes de cuisine en fonction de leurs envies et de leurs besoins.
+Vous devez développer l'intégralité du visuel de l'application ainsi que les différents algorithmes de recherche nécessaires à son fonctionnement en créant un moteur de recherche qui permettra de filtrer les recettes en fonction des ingrédients, appareils et ustensiles disponibles.
 
-## Expanding the ESLint configuration
+## Author
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- David DE FREITAS
 
-- Configure the top-level `parserOptions` property like this:
+## Technos
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=bootstrap,css,figma,github,html,js" />
+  </a>
+</p>
