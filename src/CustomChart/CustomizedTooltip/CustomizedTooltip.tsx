@@ -18,7 +18,6 @@ const CustomizedTooltip: React.FC<CustomizedTooltipProps> = (props) => {
             </div>
         );
     }
-
     return null;
 }
 

@@ -3,3 +3,7 @@
     width: 100%;
     display: flex;
 }
+
+.legendStyle-0  {
+    color: var(--red);
+}

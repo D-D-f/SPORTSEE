@@ -3,6 +3,7 @@
 :root {
     --red: #FF0101;
     --gray: #00000005;
+    --fontColorChart: #74798C;
 }
 
 * {
@@ -17,3 +18,4 @@ body,
 #root, .container {
     height: 100%;
 }
+

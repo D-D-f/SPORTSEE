@@ -2,11 +2,8 @@
 import {Radar, PolarGrid, RadarChart, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend} from 'recharts';
 import UseCallApi from "../../CustomHooks/UseCallApi/UseCallApi.tsx";
 
-
 const RadarChartActivity = () => {
     const [data] = UseCallApi('12', 'performance');
-
-    console.log(data)
 
     return (
         <ResponsiveContainer width="100%" height="100%">
