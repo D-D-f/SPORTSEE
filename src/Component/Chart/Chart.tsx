@@ -15,15 +15,12 @@ const Chart = () => {
             >
                 <Legend verticalAlign='top' align='right' iconType='circle' wrapperStyle={{marginTop: '-33px'}} />
                 <CartesianGrid strokeDasharray='3 3' vertical={false} />
-                <XAxis dataKey="day" tickLine={false} scale="point" padding={{left: 50, right: 50}} />
                 <XAxis dataKey='day' tickLine={false} axisLine={false} />
-                <XAxis dataKey='calories' type='number' tickLine={false} axisLine={false} />
-                <YAxis dataKey='kilogram' type='number' tickLine={false} axisLine={false}  orientation='right'
-                       domain={['dataMin - 1', 'dataMax + 1']} />
-                <YAxis dataKey='calories' type='number' yAxisId='calorie'  />
+                <YAxis dataKey='kilogram' type='number' tickLine={false} orientation='right' axisLine={false} domain={['dataMin - 1', 'dataMax + 1']} />
+                <YAxis dataKey='calories' type='number' yAxisId='calorie' hide />
                 <Tooltip />
                 <Bar barSize={10} name="Poids (kg)" dataKey="kilogram" fill="#E60000" radius={[10, 10, 0, 0]} />
-                <Bar barSize={10} name="Calories brûlées (kCal)" dataKey="calories" radius={[10, 10, 0, 0]} />
+                <Bar barSize={10} name="Calories brûlées (kCal)" yAxisId='calorie' dataKey="calories" radius={[10, 10, 0, 0]} />
             </BarChart>
         </ResponsiveContainer>
     )
