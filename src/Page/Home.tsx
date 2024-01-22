@@ -8,7 +8,7 @@ import chicken from "../assets/icon/chicken.svg";
 import apple from "../assets/icon/apple.svg";
 import burger from "../assets/icon/cheeseburger.svg";
 import RadarChartActivity from "../Component/RadarChartActivity/RadarChartActivity.tsx";
-
+import LineChartActivity from "../Component/LineChartActivity/LineChartActivity.tsx"
 const Home = () => {
     const [data] = UseCallApi();
     const name = data.data?.userInfos?.firstName;
@@ -19,7 +19,8 @@ const Home = () => {
             <main>
                 <div className="containerChart">
                     <Chart/>
-                    <div style={{width: "100%", height:"50%"}}>
+                    <div style={{display:"flex", width: "100%", height:"50%"}}>
+                        <LineChartActivity />
                         <RadarChartActivity/>
                     </div>
                 </div>
