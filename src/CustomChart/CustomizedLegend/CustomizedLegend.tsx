@@ -1,4 +1,4 @@
-const CustomizedLegend = (props) => {
+const CustomizedLegend = (props: {payload: [] }) => {
     const {payload} = props;
 
     return (

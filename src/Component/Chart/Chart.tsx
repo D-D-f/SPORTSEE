@@ -1,11 +1,11 @@
 import "./Chart.css";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import UseCallApi from "../../CustomHooks/UseCallApi/UseCallApi.tsx";
+import {UseCallApiActivity} from "../../CustomHooks/UseCallApi/UseCallApi.tsx";
 import CustomizedTooltip from "../../CustomChart/CustomizedTooltip/CustomizedTooltip.tsx";
 import CustomizedLegend from "../../CustomChart/CustomizedLegend/CustomizedLegend.tsx";
 
 const Chart = () => {
-    const [data] = UseCallApi( "12",  "activity");
+    const [data] = UseCallApiActivity();
 
     return (
         <>
