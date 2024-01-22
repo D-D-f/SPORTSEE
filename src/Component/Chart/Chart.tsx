@@ -1,6 +1,7 @@
 import "./Chart.css";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import UseCallApi from "../../CustomHooks/UseCallApi/UseCallApi.tsx";
+import CustomizedTooltip from "../../CustomChart/CustomizedTooltip/CustomizedTooltip.tsx";
 
 const Chart = () => {
     const [data] = UseCallApi( "12",  "activity");
@@ -18,7 +19,7 @@ const Chart = () => {
                 <XAxis dataKey='day' tickLine={false} axisLine={false} />
                 <YAxis dataKey='kilogram' type='number' tickLine={false} orientation='right' axisLine={false} domain={['dataMin - 1', 'dataMax + 1']} />
                 <YAxis dataKey='calories' type='number' yAxisId='calorie' hide />
-                <Tooltip />
+                <Tooltip content={<CustomizedTooltip />} />
                 <Bar barSize={10} name="Poids (kg)" dataKey="kilogram" fill="#E60000" radius={[10, 10, 0, 0]} />
                 <Bar barSize={10} name="Calories brûlées (kCal)" yAxisId='calorie' dataKey="calories" radius={[10, 10, 0, 0]} />
             </BarChart>
