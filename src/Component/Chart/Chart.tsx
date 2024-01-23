@@ -1,18 +1,17 @@
 import "./Chart.css";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import {UseCallApiActivity} from "../../CustomHooks/UseCallApi/UseCallApi.tsx";
+import {UseCallApiActivity} from "../../CustomHooks/UseCallApi/UseCallApi.ts";
 import CustomizedTooltip from "../../CustomChart/CustomizedTooltip/CustomizedTooltip.tsx";
 import CustomizedLegend from "../../CustomChart/CustomizedLegend/CustomizedLegend.tsx";
 
 const Chart = () => {
     const [data] = UseCallApiActivity();
+    console.log(data)
 
     return (
         <>
-            <ResponsiveContainer style={{paddingTop: 50, paddingLeft: 50, paddingBottom: 50, margin: 0, backgroundColor: 'var(--gray)', borderRadius: "10px"}} width="100%" height="40%">
+            <ResponsiveContainer className="responsiveContainerChart" width="100%" height="30%">
                 <BarChart
-                    width={500}
-                    height={300}
                     data={data.data?.sessions}
                     barSize={20}
                 >

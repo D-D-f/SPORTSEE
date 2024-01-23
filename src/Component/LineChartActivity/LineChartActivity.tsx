@@ -1,5 +1,5 @@
 import { LineChart, Line, XAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import {UseCallApiSession} from "../../CustomHooks/UseCallApi/UseCallApi.tsx";
+import {UseCallApiSession} from "../../CustomHooks/UseCallApi/UseCallApi.ts";
 import CustomizedTooltipSession from "../../CustomChart/CustomizedTooltipSession/CustomizedTooltipSession.tsx";
 
 const LineChartActivity = () => {
@@ -17,8 +17,8 @@ const LineChartActivity = () => {
     }
 
     return (
-        <ResponsiveContainer width="100%" height="100%">
-            <LineChart width={258} height={263} data={data?.data?.sessions}
+        <ResponsiveContainer width="33%" height="65%" style={{backgroundColor: "var(--red)"}}>
+            <LineChart data={data?.data?.sessions}
                        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="0 0" />
                 <XAxis dataKey="letterDay" />

@@ -1,6 +1,7 @@
 import "./CardMacronutrient.css";
 import CardMacronutrientProps from "../../Interface/CardMacronutrientProps.tsx";
 const CardMacronutrient = ({link, type, quantity, color}: CardMacronutrientProps) => {
+
     const styleMycro = {
         backgroundColor: color,
     }

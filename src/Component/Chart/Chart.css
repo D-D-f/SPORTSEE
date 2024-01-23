@@ -1,0 +1,15 @@
+.responsiveContainerChart {
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    margin: 0;
+    background-color: var(--gray);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 640px) {
+    .responsiveContainerChart {
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+}
