@@ -1,8 +1,10 @@
 import useSWR from "swr";
+import {PerformanceProps, SessionProps, ActivityProps, MainDataProps}  from "../../Interface/CallApiProps.tsx";
+
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
-export const UseCallApi = () => {
+export const UseCallApi = (): MainDataProps[] | string => {
     const apiUrl = `http://localhost:3000/user/12`;
 
     const {data, error, isLoading} = useSWR(
@@ -15,7 +17,7 @@ export const UseCallApi = () => {
     return [data]
 }
 
-export const UseCallApiActivity = () => {
+export const UseCallApiActivity = (): ActivityProps[] | string => {
     const apiUrl = `http://localhost:3000/user/12/activity`;
 
     const {data, error, isLoading} = useSWR(
@@ -28,25 +30,7 @@ export const UseCallApiActivity = () => {
     return [data]
 }
 
-interface Performance {
-    userId: number,
-    kind: {
-        1: 'cardio',
-        2: 'energy',
-        3: 'endurance',
-        4: 'strength',
-        5: 'speed',
-        6: 'intensity'
-    },
-    data: [
-        {
-            value: number,
-            kind: number
-        }
-    ]
-}
-
-export const UseCallApiPerformance = (): Performance[] | string => {
+export const UseCallApiPerformance = (): PerformanceProps[] | string => {
     const apiUrl = `http://localhost:3000/user/12/performance`;
 
     const {data, error, isLoading} = useSWR(
@@ -56,10 +40,10 @@ export const UseCallApiPerformance = (): Performance[] | string => {
     if (error) throw new Error("Unable to recover data");
     if (isLoading) return "Loading";
 
-    return data;
+    return [data];
 }
 
-export const UseCallApiSession = () => {
+export const UseCallApiSession = (): SessionProps[] | string => {
     const apiUrl = `http://localhost:3000/user/12/average-sessions`;
 
     const {data, error, isLoading} = useSWR(
@@ -69,5 +53,6 @@ export const UseCallApiSession = () => {
     if (error) throw new Error("Unable to recover data");
     if (isLoading) return "Loading";
 
-    return data
+    return [data]
 }
+

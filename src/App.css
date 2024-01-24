@@ -8,7 +8,7 @@
     color: var(--red);
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 840px) {
     .main {
         height: calc(100% - 50px);
     }

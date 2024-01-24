@@ -4,8 +4,8 @@
     width: 117px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 840px) {
     .headBand {
-        width: 20px;
+        width: 50px;
     }
 }

@@ -11,17 +11,16 @@
 
 .customLegendUl {
     display: flex;
-    justify-content: space-between;
-    width: 30%;
+    gap: 40px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 840px) {
     .customLegendP {
         font-size: 8px;
     }
 
     .customLegendUl {
-        justify-content: space-between;
+        gap: 15px;
         font-size: 7px;
         width: 50%;
         margin-right: 0%;

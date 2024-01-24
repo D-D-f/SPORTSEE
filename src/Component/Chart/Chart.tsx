@@ -10,7 +10,7 @@ const Chart = () => {
 
     return (
         <>
-            <ResponsiveContainer className="responsiveContainerChart" minWidth={300} width={"80%"} height={"30%"}>
+            <ResponsiveContainer className="responsiveContainerChart" minWidth={260} width={"80%"} height={"30%"}>
                 <BarChart
                     data={data.data?.sessions}
                     barSize={20}

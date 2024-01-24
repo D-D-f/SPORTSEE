@@ -1,14 +1,13 @@
 import "./Home.css";
 import Name from "../Component/Name/Name.tsx";
 import Chart from "../Component/Chart/Chart.tsx";
+import LineChartActivity from "../Component/LineChartActivity/LineChartActivity.tsx";
 import {UseCallApi} from "../CustomHooks/UseCallApi/UseCallApi.ts";
 import CardMacronutrient from "../Component/CardMacronutrient/CardMacronutrient.tsx";
 import fire from "../assets/icon/energy.svg";
 import chicken from "../assets/icon/chicken.svg";
 import apple from "../assets/icon/apple.svg";
 import burger from "../assets/icon/cheeseburger.svg";
-
-
 
 const Home = () => {
     const [data] = UseCallApi();
@@ -21,6 +20,7 @@ const Home = () => {
                 <div className="containerChart">
                     <Chart/>
                     <div style={{display:"flex", width: "100%", height:"50%"}}>
+                        <LineChartActivity />
                     </div>
                 </div>
                 <div className="containerCard">

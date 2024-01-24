@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     background-color: var(--gray);
-    padding: 50px;
+    padding: 30px;
     border-radius: 10px;
 }
 
@@ -16,13 +16,41 @@
 }
 
 .cardMacroP {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .cardMacroSpan {
     display: flex;
     color: #74798C;
-    fontSize: 14px;
+    fontSize: 10px;
+}
+
+
+@media screen and (max-width: 840px) {
+    .cardMacro {
+        padding: 20px;
+    }
+
+    .containerImgMacro {
+        padding: 1px;
+    }
+
+    .containerImgMacro img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .cardMacroP {
+        font-size: 12px;
+    }
+
+    .cardMacroSpan {
+        font-size: 7px;
+    }
+
+    .cardMacroType {
+        margin-left: 10px;
+    }
 }
 
 
@@ -46,5 +74,9 @@
 
     .cardMacroSpan {
         font-size: 5px;
+    }
+
+    .cardMacroType {
+        margin-left: 10px;
     }
 }
