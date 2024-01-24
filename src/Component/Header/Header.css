@@ -23,6 +23,9 @@ header ul li {
 }
 
 @media screen and (max-width: 640px) {
+    .header {
+        height: 50px;
+    }
     header ul li {
         font-size: 12px;
     }

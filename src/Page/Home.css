@@ -11,7 +11,7 @@
 }
 
 .Home main .containerChart {
-    width: 100%;
+    width: 80%;
 }
 
 .Home main .containerCard {
@@ -23,6 +23,10 @@
 
 @media screen and (max-width: 640px) {
     .Home {
-        padding: 30px;
+        padding: 10px;
+    }
+
+    .Home main  {
+        gap: 2px;
     }
 }

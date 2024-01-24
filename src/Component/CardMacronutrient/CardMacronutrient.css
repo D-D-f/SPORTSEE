@@ -14,3 +14,37 @@
     padding: 20px;
     border-radius: 5px;
 }
+
+.cardMacroP {
+    font-size: 20px;
+}
+
+.cardMacroSpan {
+    display: flex;
+    color: #74798C;
+    fontSize: 14px;
+}
+
+
+@media screen and (max-width: 640px) {
+    .cardMacro {
+        padding: 10px;
+    }
+
+    .containerImgMacro {
+        padding: 1px;
+    }
+
+    .containerImgMacro img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .cardMacroP {
+        font-size: 8px;
+    }
+
+    .cardMacroSpan {
+        font-size: 5px;
+    }
+}

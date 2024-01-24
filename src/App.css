@@ -7,3 +7,9 @@
 .legendStyle-1  {
     color: var(--red);
 }
+
+@media screen and (max-width: 640px) {
+    .main {
+        height: calc(100% - 50px);
+    }
+}

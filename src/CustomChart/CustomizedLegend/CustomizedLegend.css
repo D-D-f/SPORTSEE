@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     alignItems: center;
-    width: 90%;
+    width: 98%;
 }
 
 .customLegendP {
@@ -11,9 +11,8 @@
 
 .customLegendUl {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 30%;
-    marginRight: 4%;
 }
 
 @media screen and (max-width: 640px) {
@@ -30,5 +29,6 @@
 
     .customLegend {
         justify-content: space-between;
+        width: 85%;
     }
 }

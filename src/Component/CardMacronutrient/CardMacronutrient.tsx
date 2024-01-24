@@ -12,7 +12,7 @@ const CardMacronutrient = ({link, type, quantity, color}: CardMacronutrientProps
                 <img src={link} alt="logo"/>
             </div>
             <div className="cardMacroType">
-                {type === "Calories" ? <p style={{fontSize: "20px"}}>{quantity}kCal<span style={{display: "block", color: "#74798C", fontSize: "14px"}}>{type}</span></p> : <p style={{fontSize: "20px"}}>{quantity}g <span style={{display: "block", color: "#74798C", fontSize: "14px"}}>{type}</span></p>}
+                {type === "Calories" ? <p className="cardMacroP">{quantity}kCal<span className="cardMacroSpan">{type}</span></p> : <p className="cardMacroP">{quantity}g <span className="cardMacroSpan">{type}</span></p>}
             </div>
         </article>
     )
