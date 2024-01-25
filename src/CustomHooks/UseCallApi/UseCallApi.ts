@@ -27,7 +27,7 @@ export const UseCallApiActivity = (): ActivityProps[] | string => {
     if (error) throw new Error("Unable to recover data");
     if (isLoading) return "Loading";
 
-    return [data]
+    return [data];
 }
 
 export const UseCallApiPerformance = (): PerformanceProps[] | string => {

@@ -27,7 +27,7 @@ export interface SessionProps {
 
 export interface ActivityProps {
     userId: number,
-    sessions: [
+        sessions: [
         {
             day: string,
             kilogram: number,
