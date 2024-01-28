@@ -19,3 +19,9 @@
     <img src="https://skillicons.dev/icons?i=css,figma,github,react" />
   </a>
 </p>
+
+## Compétences évaluées
+
+- Assurer la qualité des données d'une application
+- Développer des éléments graphiques avancés à l'aide de bibliothèques JavaScript
+- Interagir avec un service Web
