@@ -1,10 +1,10 @@
 import "./Name.css";
-import NameProps from "../../Interface/NameProps.tsx";
+import {NameProps} from "../../Interface/InterfaceProps.ts";
 
 const Name = ({name}: NameProps) => {
     return (
-        <div className="div_name">
-            <h1>Bonjour <span>{name}</span></h1>
+        <div className="containerName">
+            <h1>Bonjour <span className="spanName">{name}</span></h1>
             <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
         </div>
     )

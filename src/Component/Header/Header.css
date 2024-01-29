@@ -1,32 +1,24 @@
-.header {
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 28px;
-    height: 91px;
-    font-family: "Roboto", sans-serif;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-header ul {
-    width: 80%;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+header {
+    background-color: var(--backgroundHeader);
     color: white;
+    height: 81px;
+    padding: 10px;
+    min-width: max-content;
 }
 
-header ul li {
-    font-size: 24px;
+header nav, header nav ul {
+    width: 100%;
 }
 
-@media screen and (max-width: 840px) {
-    .header {
-        height: 50px;
-    }
-    header ul li {
-        font-size: 12px;
-    }
+header nav ul {
+    list-style: none;
+    font-size: 1.5rem;
+    width: 100%;
+    gap: 40px;
+}
+
+
+.logoHeader {
+    height: 3rem;
+    margin-right: 1rem;
 }

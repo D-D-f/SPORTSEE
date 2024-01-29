@@ -1,21 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
+    --backgroundHeader: #020203;
     --red: #FF0101;
-    --gray: #00000005;
+    --backgroundGray: #FBFBFB;
+    --darkGray: #282D30;
     --fontColorChart: #74798C;
 }
 
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    font-family: "Roboto";
+    box-sizing: content-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-html,
-body,
-#root, .container {
+html, body, #root {
     height: 100%;
+    overflow-y: hidden;
 }
-

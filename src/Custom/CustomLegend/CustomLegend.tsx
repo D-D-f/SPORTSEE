@@ -1,6 +1,5 @@
-import "./CustomizedLegend.css";
-
-const CustomizedLegend = (props: {payload: [] }) => {
+import "./CustomLegend.css";
+const CustomLegend = (props: {payload: [] }) => {
     const {payload} = props;
 
     return (
@@ -15,4 +14,4 @@ const CustomizedLegend = (props: {payload: [] }) => {
     )
 }
 
-export default CustomizedLegend;
+export default CustomLegend;

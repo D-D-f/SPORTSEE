@@ -1,15 +1,36 @@
-.main {
-    height: calc(100% - 91px);
-    width: 100%;
+.d_flex {
     display: flex;
 }
 
-.legendStyle-1  {
-    color: var(--red);
+.justifyContentBetween {
+    justify-content: space-between;
 }
 
-@media screen and (max-width: 840px) {
-    .main {
-        height: calc(100% - 50px);
-    }
+.justifyContentCenter {
+    justify-content: center;
+}
+
+.justifyContentAround {
+    justify-content: space-around;
+}
+
+.justifiyContentEvenly {
+    justify-content: space-evenly;
+}
+
+.alignItemsCenter {
+    align-items: center;
+}
+
+.flexColumn {
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    height: calc(100% - 101px);
+}
+
+.containerMain {
+    width: 100%;
 }

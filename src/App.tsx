@@ -1,18 +1,18 @@
+import './App.css';
 import Header from "./Component/Header/Header.tsx";
+import Home from "./Page/Home/Home.tsx";
 import HeadBand from "./Component/HeadBand/HeadBand.tsx";
-import Home from "./Page/Home.tsx";
-import "./App.css";
 
 const App = () => {
   return (
-    <div className="container">
-        <Header />
-            <main className="main">
-                <HeadBand />
-                <Home />
-            </main>
-    </div>
+    <>
+      <Header />
+        <div className="container d_flex containerMain">
+            <HeadBand />
+            <Home />
+        </div>
+    </>
   )
 }
 
-export default App
+export default App;

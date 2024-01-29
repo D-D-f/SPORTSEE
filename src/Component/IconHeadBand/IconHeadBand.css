@@ -1,0 +1,6 @@
+.iconHeadBand {
+    background-color: var(--backgroundGray);
+    height: 40px;
+    padding: 10px;
+    border-radius: 6px;
+}

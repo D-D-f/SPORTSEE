@@ -1,0 +1,15 @@
+main {
+    width: max-content;
+    padding: 40px;
+    width: 100%;
+}
+
+.containerChart {
+    height: 70%;
+    width: 70%;
+}
+
+.firstChart {
+    background-color: var(--backgroundGray);
+    padding: 7px;
+}

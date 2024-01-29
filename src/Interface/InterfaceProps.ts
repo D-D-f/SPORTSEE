@@ -1,3 +1,27 @@
+export interface NameProps {
+    name: string;
+}
+
+export interface IconHeadBandProps {
+    icon: string;
+}
+
+export interface MainDataProps {
+    id: number,
+    userInfos: {
+        firstName: string,
+        lastName: string,
+        age: number,
+    },
+    todayScore: number,
+    keyData: {
+        calorieCount: number,
+        proteinCount: number,
+        carbohydrateCount: number,
+        lipidCount: number
+    }
+}
+
 export interface PerformanceProps {
     userId: number,
     kind: {
@@ -27,27 +51,10 @@ export interface SessionProps {
 
 export interface ActivityProps {
     userId: number,
-        sessions: [
+    sessions: [
         {
             day: string,
             kilogram: number,
             calories: number
         }],
 }
-
-export interface MainDataProps {
-    id: number,
-    userInfos: {
-        firstName: string,
-        lastName: string,
-        age: number,
-    },
-    todayScore: number,
-    keyData: {
-        calorieCount: number,
-        proteinCount: number,
-        carbohydrateCount: number,
-        lipidCount: number
-    }
-}
-

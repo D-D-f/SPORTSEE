@@ -1,11 +1,14 @@
-.headBand {
-    background-color: black;
-    height: 100%;
+.HeadBand {
+    background-color: var(--backgroundHeader);
     width: 117px;
 }
 
-@media screen and (max-width: 840px) {
-    .headBand {
-        width: 50px;
-    }
+.HeadBand_P {
+    width:max-content;
+    color:white;
+    transform: rotate(270deg);
+}
+
+.iconsHeadBand {
+    gap: 15px;
 }

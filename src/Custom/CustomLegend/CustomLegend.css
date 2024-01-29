@@ -1,0 +1,19 @@
+.customLegend {
+    display: flex;
+    justify-content: space-between;
+    alignItems: center;
+    width: 98%;
+}
+
+.customLegendP {
+    font-weight: bold;
+}
+
+.customLegendUl {
+    display: flex;
+    gap: 40px;
+}
+
+.legendStyle-1  {
+    color: var(--red);
+}
