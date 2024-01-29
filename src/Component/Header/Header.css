@@ -3,7 +3,6 @@ header {
     color: white;
     height: 81px;
     padding: 10px;
-    min-width: max-content;
 }
 
 header nav, header nav ul {

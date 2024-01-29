@@ -58,3 +58,10 @@ export interface ActivityProps {
             calories: number
         }],
 }
+
+export interface CardMacroProps {
+    picture: string;
+    quantity: number;
+    type: string;
+    color: string;
+}

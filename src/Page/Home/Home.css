@@ -2,14 +2,22 @@ main {
     width: max-content;
     padding: 40px;
     width: 100%;
+    border: 1px solid black;
 }
 
 .containerChart {
-    height: 70%;
-    width: 70%;
+    height: 90%;
+    width: 100%;
+    gap: 20px;
 }
 
 .firstChart {
+    height: 36%;
     background-color: var(--backgroundGray);
     padding: 7px;
+    width: 100%;
+}
+
+.allCardsMacro {
+    width: 30%;
 }

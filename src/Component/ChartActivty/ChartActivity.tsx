@@ -3,6 +3,7 @@ import {UseCallApiActivity} from "../../Api/UseCallApi.ts";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import CustomLegend from "../../Custom/CustomLegend/CustomLegend.tsx";
 import CustomTickChart from "../../Custom/CustomTickChart/CustomTickChart.tsx";
+import CustomChartTooltip from "../../Custom/CustomChartTooltip/CustomChartTooltip.tsx";
 
 
 const ChartActivity = () => {
@@ -22,7 +23,7 @@ const ChartActivity = () => {
                 <XAxis dataKey="day" tickLine={false} axisLine={false} tick={<CustomTickChart />} />
                 <YAxis dataKey='kilogram' type='number' tickLine={false} orientation='right' axisLine={false} domain={['dataMin - 1', 'dataMax + 1']} />
                 <YAxis dataKey='calories' type='number' yAxisId='calorie' hide />
-                <Tooltip/>
+                <Tooltip content={<CustomChartTooltip />}/>
                 <Legend/>
                 <Bar name="Poids (kg)" dataKey="kilogram" fill="var(--red)" radius={[20, 20, 0, 0]} barSize={15} />
                 <Bar name="Calories brûlées (kCal)" dataKey="calories" yAxisId='calorie' fill="var(--darkGray)" radius={[20, 20, 0, 0]} barSize={15} />

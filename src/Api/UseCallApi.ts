@@ -1,9 +1,8 @@
 import useSWR from "swr";
-import {ActivityProps, SessionProps, PerformanceProps, MainDataProps} from "../Interface/InterfaceProps.ts";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
-export const UseCallApi = (): MainDataProps | string  => {
+export const UseCallApi = ()  => {
     const apiUrl = `http://localhost:3000/user/12`;
 
     const { data, error, isLoading } = useSWR(apiUrl, fetcher);
@@ -14,7 +13,7 @@ export const UseCallApi = (): MainDataProps | string  => {
     return data;
 };
 
-export const UseCallApiActivity = (): ActivityProps | string => {
+export const UseCallApiActivity = () => {
     const apiUrl = `http://localhost:3000/user/12/activity`;
 
     const {data, error, isLoading} = useSWR(
@@ -27,7 +26,7 @@ export const UseCallApiActivity = (): ActivityProps | string => {
     return data;
 }
 
-export const UseCallApiPerformance = (): PerformanceProps | string => {
+export const UseCallApiPerformance = () => {
     const apiUrl = `http://localhost:3000/user/12/performance`;
 
     const {data, error, isLoading} = useSWR(
@@ -40,7 +39,7 @@ export const UseCallApiPerformance = (): PerformanceProps | string => {
     return data;
 }
 
-export const UseCallApiSession = (): SessionProps | string => {
+export const UseCallApiSession = () => {
     const apiUrl = `http://localhost:3000/user/12/average-sessions`;
 
     const {data, error, isLoading} = useSWR(
