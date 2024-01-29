@@ -11,8 +11,8 @@ const CardMacro = ({picture, quantity, type, color}: CardMacroProps) => {
                 <img src={picture} alt="logo"/>
             </div>
             <div>
-                {type === "Calories" ? <div><p>{quantity}kCal</p><p>{type}</p></div> :
-                    <div><p>{quantity}g</p><p>{type}</p></div>}
+                {type === "Calories" ? <div><p>{quantity}kCal</p><p style={{fontSize: "12px", color: "var(--fontColorChart)"}}>{type}</p></div> :
+                    <div><p>{quantity}g</p><p style={{fontSize: "12px", color: "var(--fontColorChart)"}}>{type}</p></div>}
             </div>
         </div>
     )

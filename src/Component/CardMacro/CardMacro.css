@@ -2,6 +2,7 @@
     width: 100%;
     background-color: var(--backgroundGray);
     padding: 20px 20px;
+    border-radius: 6px;
 }
 
 .containerLogoMacro {

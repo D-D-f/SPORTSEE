@@ -1,8 +1,7 @@
 main {
     width: max-content;
-    padding: 40px;
+    padding: 60px;
     width: 100%;
-    border: 1px solid black;
 }
 
 .containerChart {
