@@ -25,7 +25,6 @@ const LineChartSession = () => {
                        onMouseMove={(e) => {
                            if (e.isTooltipActive === true) {
                                const div: Element | any = document.querySelector('.objectif-responsive > .recharts-wrapper');
-                                console.log(div)
                                if (e.isTooltipActive) {
                                    const windowWidth = div.clientWidth;
                                    const mouseXpercentage = Math.round((e.activeCoordinate.x / windowWidth) * 100)
