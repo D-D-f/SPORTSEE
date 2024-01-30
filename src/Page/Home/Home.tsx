@@ -9,6 +9,7 @@ import apple from "../../asset/icon/apple.svg";
 import burger from "../../asset/icon/cheeseburger.svg";
 import LineChartSession from "../../Component/LineChartSession/LineChartSession.tsx";
 import RadarChartPerformance from "../../Component/RadarChartPerformance/RadarChartPerformance.tsx";
+import RadialBarChartObjective from "../../Component/RadialBarChartObjective/RadialBarChartObjective.tsx";
 
 const Home = () => {
     const data = UseCallApi();
@@ -25,9 +26,10 @@ const Home = () => {
             <div className="containerChart d_flex">
                 <div className="firstChart">
                     <ChartActivity />
-                    <div className="d_flex justifyContentBetween">
+                    <div className="d_flex justifyContentBetween" style={{marginTop: "50px"}}>
                         <LineChartSession />
                         <RadarChartPerformance />
+                        <RadialBarChartObjective dataOriginal={data} />
                     </div>
                 </div>
                 <div className="allCardsMacro d_flex flexColumn justifyContentBetween">

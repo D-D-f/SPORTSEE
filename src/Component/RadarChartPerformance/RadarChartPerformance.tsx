@@ -10,7 +10,7 @@ const RadarChartPerformance = () => {
     })
 
     return (
-        <ResponsiveContainer width={"30%"} height={300} style={{backgroundColor: "rgb(40, 45, 48)"}}>
+        <ResponsiveContainer width={"30%"} height={300} style={{backgroundColor: "var(--darkGray)", borderRadius:"5px"}}>
             <RadarChart outerRadius={90} data={newData} >
                 <PolarGrid />
                 <PolarAngleAxis dataKey="name" stroke='#FFFFFF' fontSize={14} tickLine={false} />

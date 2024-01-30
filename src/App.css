@@ -22,6 +22,10 @@
     align-items: center;
 }
 
+.alignItemsEnd {
+    align-items: end;
+}
+
 .flexColumn {
     flex-direction: column;
 }

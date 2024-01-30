@@ -5,18 +5,18 @@ main {
 }
 
 .containerChart {
-    height: 90%;
+    height: 68%;
     width: 100%;
     gap: 20px;
 }
 
 .firstChart {
-    height: 36%;
+    height: 50%;
     background-color: var(--backgroundGray);
     padding: 7px;
     width: 100%;
 }
 
 .allCardsMacro {
-    width: 30%;
+    width: 20%;
 }
