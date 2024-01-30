@@ -7,6 +7,7 @@ import fire from "../../asset/icon/energy.svg";
 import chicken from "../../asset/icon/chicken.svg";
 import apple from "../../asset/icon/apple.svg";
 import burger from "../../asset/icon/cheeseburger.svg";
+import LineChartSession from "../../Component/LineChartSession/LineChartSession.tsx";
 
 const Home = () => {
     const data = UseCallApi();
@@ -23,6 +24,9 @@ const Home = () => {
             <div className="containerChart d_flex">
                 <div className="firstChart">
                     <ChartActivity />
+                    <div>
+                        <LineChartSession />
+                    </div>
                 </div>
                 <div className="allCardsMacro d_flex flexColumn justifyContentBetween">
                     {displayLogo}
