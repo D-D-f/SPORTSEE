@@ -1,7 +1,7 @@
 import {LineChart, XAxis, Tooltip, Line, ResponsiveContainer, Legend, YAxis} from "recharts";
 import {UseCallApiSession} from "../../Api/UseCallApi.ts";
-import CustomLineChartTooltip from "../../Custom/CustomLineChartTooltip/CustomLineChartTooltip.tsx";
-import CustomLineChartLegend from "../../Custom/CustomLineChartLegend/CustomLineChartLegend.tsx";
+import CustomLineChartTooltip from "../../Custom/CustomLineChartTooltip/CustomLineChartTooltip.tsx"
+import CustomLineChartLegend from "../../Custom/CustomLineChartLegend/CustomLineChartLegend.tsx"
 
 const LineChartSession = () => {
     const data = UseCallApiSession();
@@ -24,7 +24,7 @@ const LineChartSession = () => {
                        style={{backgroundColor: "var(--red)", borderRadius: "7px"}}
                        onMouseMove={(e) => {
                            if (e.isTooltipActive === true) {
-                               const div: Element | any = document.querySelector('.objectif-responsive > .recharts-wrapper');
+                               const div = document.querySelector('.objectif-responsive > .recharts-wrapper');
                                if (e.isTooltipActive) {
                                    const windowWidth = div.clientWidth;
                                    const mouseXpercentage = Math.round((e.activeCoordinate.x / windowWidth) * 100)
