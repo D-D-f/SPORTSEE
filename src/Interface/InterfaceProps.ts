@@ -1,5 +1,5 @@
 export interface NameProps {
-    name: string;
+    name: string | undefined;
 }
 
 export interface IconHeadBandProps {
@@ -19,7 +19,8 @@ export interface MainDataProps {
         proteinCount: number,
         carbohydrateCount: number,
         lipidCount: number
-    }
+    },
+    type: string
 }
 
 export interface PerformanceProps {
@@ -37,7 +38,8 @@ export interface PerformanceProps {
             value: number,
             kind: number
         }
-    ]
+    ],
+    type: string
 }
 
 export interface SessionProps {
@@ -47,6 +49,7 @@ export interface SessionProps {
             day: number,
             sessionLength: number
         }],
+    type: string
 }
 
 export interface ActivityProps {
@@ -57,11 +60,12 @@ export interface ActivityProps {
             kilogram: number,
             calories: number
         }],
+    type: string
 }
 
 export interface CardMacroProps {
     picture: string;
-    quantity: number;
+    quantity: number | undefined;
     type: string;
     color: string;
 }

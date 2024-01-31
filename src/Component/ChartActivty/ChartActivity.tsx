@@ -4,11 +4,16 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import CustomLegend from "../../Custom/CustomLegend/CustomLegend.tsx";
 import CustomTickChart from "../../Custom/CustomTickChart/CustomTickChart.tsx";
 import CustomChartTooltip from "../../Custom/CustomChartTooltip/CustomChartTooltip.tsx";
+import {ActivityProps} from "../../Interface/InterfaceProps.ts";
 
 
 const ChartActivity = () => {
-    const data = UseCallApiActivity();
-    const sessions = data.data?.sessions;
+    const data: string | ActivityProps = UseCallApiActivity();
+    let sessions;
+
+    if(!(typeof data === "string")) {
+        sessions = data.sessions
+    }
 
     return (
         <ResponsiveContainer width="100%" height={320} style={{marginTop: "30px"}}>
@@ -18,7 +23,7 @@ const ChartActivity = () => {
                 left: 20,
                 bottom: 5,
             }}>
-                <Legend content={<CustomLegend />} verticalAlign='top' align='right' iconType='circle' wrapperStyle={{marginTop: '-15px'}} formatter={(value) => <span style={{color: "var(--fontColorChart"}}>{value}</span>} />
+                <Legend content={<CustomLegend /> } verticalAlign='top' align='right' iconType='circle' wrapperStyle={{marginTop: '-15px'}} formatter={(value) => <span style={{color: "var(--fontColorChart"}}>{value}</span>} />
                 <CartesianGrid strokeDasharray="4 4"/>
                 <XAxis dataKey="day" tickLine={false} axisLine={false} tick={<CustomTickChart />} />
                 <YAxis dataKey='kilogram' type='number' tickLine={false} orientation='right' axisLine={false} domain={['dataMin - 1', 'dataMax + 1']} />

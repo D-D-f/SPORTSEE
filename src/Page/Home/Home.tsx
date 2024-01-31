@@ -10,13 +10,18 @@ import burger from "../../asset/icon/cheeseburger.svg";
 import LineChartSession from "../../Component/LineChartSession/LineChartSession.tsx";
 import RadarChartPerformance from "../../Component/RadarChartPerformance/RadarChartPerformance.tsx";
 import RadialBarChartObjective from "../../Component/RadialBarChartObjective/RadialBarChartObjective.tsx";
+import {MainDataProps} from "../../Interface/InterfaceProps.ts";
 
 const Home = () => {
-    const data = UseCallApi();
-    const name: string = data.data?.userInfos.firstName;
-    const allLogo = [{picture: fire, quantity: data.data?.keyData.calorieCount, type: "Calories", color:"rgba(255, 1, 1, 0.1)"}, {picture: chicken, quantity: data.data?.keyData.proteinCount, type: "Proteines", color:"#4AB8FF1A"},  {picture: apple, quantity: data.data?.keyData.carbohydrateCount, type: "Glucides", color: "rgba(249,206,35,0.1)"}, {picture: burger, quantity: data.data?.keyData.lipidCount, type: "Lipides", color:"#FD51811A"}]
+    const data: string | MainDataProps = UseCallApi();
+    let mainData;
+    if(!(typeof data === "string")) {
+        mainData = data;
+    }
 
-    const displayLogo = allLogo.map((value: {picture: string, quantity: number, type: string, color: string}, index: number) => {
+    const name: string | undefined = mainData?.userInfos.firstName;
+    const allLogo = [{picture: fire, quantity: mainData?.keyData.calorieCount, type: "Calories", color:"rgba(255, 1, 1, 0.1)"}, {picture: chicken, quantity: mainData?.keyData.proteinCount, type: "Proteines", color:"#4AB8FF1A"},  {picture: apple, quantity: mainData?.keyData.carbohydrateCount, type: "Glucides", color: "rgba(249,206,35,0.1)"}, {picture: burger, quantity: mainData?.keyData.lipidCount, type: "Lipides", color:"#FD51811A"}]
+    const displayLogo = allLogo.map((value: {picture: string, quantity: number | undefined, type: string, color: string}, index: number) => {
         return <CardMacro key={index} picture={value.picture} quantity={value.quantity} type={value.type} color={value.color} />
     })
 

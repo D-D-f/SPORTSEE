@@ -1,13 +1,21 @@
 import {RadarChart, PolarGrid, PolarAngleAxis, Radar, ResponsiveContainer} from "recharts";
 import {UseCallApiPerformance} from "../../Api/UseCallApi.ts";
+import {PerformanceProps} from "../../Interface/InterfaceProps.ts";
 
 const RadarChartPerformance = () => {
-    const data = UseCallApiPerformance();
-    const newData: any[] = [];
+    const data: string | PerformanceProps = UseCallApiPerformance();
+    let dataPerformance: any;
+    const newData: [] = [];
 
-    data.data?.data.forEach((item:{kind: number, value: string}) => {
-        newData.push({name: data.data.kind[item.kind], value: item.value})
+    if(!(typeof data === "string")) {
+        dataPerformance = data;
+    }
+
+    dataPerformance?.data.forEach((item:{kind: number, value: number}) => {
+        newData.push({name: dataPerformance?.kind[item.kind], value: item.value})
     })
+
+    console.log(newData)
 
     return (
         <ResponsiveContainer width={"30%"} height={300} style={{backgroundColor: "var(--darkGray)", borderRadius:"5px"}}>

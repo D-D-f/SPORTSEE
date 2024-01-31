@@ -5,8 +5,12 @@ import CustomLineChartLegend from "../../Custom/CustomLineChartLegend/CustomLine
 
 const LineChartSession = () => {
     const data = UseCallApiSession();
-    const sessions = data.data?.sessions;
+    let sessions: any;
     const day: string[] = ["L", "M", "M", "J", "V", "S", "D"];
+
+    if(!(typeof data === "string")) {
+        sessions = data?.sessions;
+    }
 
     if(sessions) {
         day.forEach((day: string, index: number) => {
@@ -19,20 +23,21 @@ const LineChartSession = () => {
 
     return (
         <ResponsiveContainer width={"30%"} height={300} className='objectif-responsive'>
-            <LineChart data={data.data?.sessions}
+            <LineChart data={sessions}
                        margin={{ top: 50, right: 10, left: 10, bottom: 20 }}
                        style={{backgroundColor: "var(--red)", borderRadius: "7px"}}
                        onMouseMove={(e) => {
                            if (e.isTooltipActive === true) {
                                const div = document.querySelector('.objectif-responsive > .recharts-wrapper');
-                               if (e.isTooltipActive) {
-                                   const windowWidth = div.clientWidth;
-                                   const mouseXpercentage = Math.round((e.activeCoordinate.x / windowWidth) * 100)
-                                   div.style.background = `linear-gradient(90deg, rgba(255,0,0,1) ${mouseXpercentage}%, rgba(175,0,0,1.5) ${mouseXpercentage}%, rgba(175,0,0,1.5) 100%)`
+                               if(div) {
+                                   if (e.isTooltipActive) {
+                                       const windowWidth = div.clientWidth;
+                                       const mouseXpercentage = Math.round((e.activeCoordinate.x / windowWidth) * 100)
+                                       div.style.background = `linear-gradient(90deg, rgba(255,0,0,1) ${mouseXpercentage}%, rgba(175,0,0,1.5) ${mouseXpercentage}%, rgba(175,0,0,1.5) 100%)`
+                                   }
                                }
                            }
                        }}
-
             >
                 <XAxis dataKey="days" tickLine={false} tickSize={20} stroke='#FFFFFF' opacity={0.5} axisLine={false} />
                 <YAxis padding={{ top: 50 }} stroke='#FFFFFF' opacity={0.5} tickLine={false} axisLine={false} hide />

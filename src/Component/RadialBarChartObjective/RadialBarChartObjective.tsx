@@ -2,8 +2,8 @@ import {RadialBarChart, Legend, RadialBar, ResponsiveContainer} from "recharts";
 import CustomLegendScore from "../../Custom/CustomLegendScore/CustomLegendScore.tsx";
 
 const RadialBarChartObjective = ({dataOriginal}) => {
-    const { data } = dataOriginal;
-    const newData = [];
+    const data = dataOriginal;
+    const newData: any[] = [];
     let score;
 
     if(data) {
@@ -12,7 +12,7 @@ const RadialBarChartObjective = ({dataOriginal}) => {
         } else {
             score = data.todayScore
         }
-
+        console.log(data)
         newData.push({
             userId: data.id,
             todayScore: 100,
