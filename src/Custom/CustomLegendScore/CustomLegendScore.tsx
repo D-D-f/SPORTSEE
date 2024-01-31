@@ -1,5 +1,4 @@
 const CustomLegendScore = ({payload}) => {
-    console.log(payload)
     return (
         <div style={{height: "300px"}}>
             <p style={{position: "absolute", top: "20px", left: "20px", fontWeight: "bold", fontSize: "20px"}}>Score</p>
