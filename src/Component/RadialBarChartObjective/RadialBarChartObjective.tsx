@@ -12,7 +12,6 @@ const RadialBarChartObjective = ({dataOriginal}) => {
         } else {
             score = data.todayScore
         }
-        console.log(data)
         newData.push({
             userId: data.id,
             todayScore: 100,
@@ -22,7 +21,6 @@ const RadialBarChartObjective = ({dataOriginal}) => {
             userId: data.id,
             todayScore: score * 100,
         })
-
     }
 
     return (

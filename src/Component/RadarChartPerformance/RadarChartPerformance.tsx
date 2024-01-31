@@ -15,8 +15,6 @@ const RadarChartPerformance = () => {
         newData.push({name: dataPerformance?.kind[item.kind], value: item.value})
     })
 
-    console.log(newData)
-
     return (
         <ResponsiveContainer width={"30%"} height={300} style={{backgroundColor: "var(--darkGray)", borderRadius:"5px"}}>
             <RadarChart outerRadius={40} data={newData} >
