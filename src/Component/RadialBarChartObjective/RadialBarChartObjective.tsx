@@ -27,7 +27,7 @@ const RadialBarChartObjective = ({dataOriginal}) => {
 
     return (
         <ResponsiveContainer width={"30%"} height={300} style={{backgroundColor: "var(--backgroundGray)", borderRadius: "5px"}}>
-            <RadialBarChart startAngle={140} endAngle={500} barSize={10} outerRadius={180} data={newData} >
+            <RadialBarChart startAngle={140} endAngle={500} barSize={10} outerRadius={140} data={newData} >
                 <RadialBar dataKey='todayScore' fill="#E60000" background />
                 <Legend content={<CustomLegendScore />} />
             </RadialBarChart>
