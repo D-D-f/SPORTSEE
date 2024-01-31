@@ -2,8 +2,10 @@ import useSWR from "swr";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
+const USER_ID: number = 12;
+
 export const UseCallApi = ()  => {
-    const apiUrl = `http://localhost:3000/user/12`;
+    const apiUrl = `http://localhost:3000/user/${USER_ID}`;
 
     const { data, error, isLoading } = useSWR(apiUrl, fetcher);
 
@@ -14,7 +16,7 @@ export const UseCallApi = ()  => {
 };
 
 export const UseCallApiActivity = () => {
-    const apiUrl = `http://localhost:3000/user/12/activity`;
+    const apiUrl = `http://localhost:3000/user/${USER_ID}/activity`;
 
     const {data, error, isLoading} = useSWR(
         apiUrl,
@@ -27,7 +29,7 @@ export const UseCallApiActivity = () => {
 }
 
 export const UseCallApiPerformance = () => {
-    const apiUrl = `http://localhost:3000/user/12/performance`;
+    const apiUrl = `http://localhost:3000/user/${USER_ID}/performance`;
 
     const {data, error, isLoading} = useSWR(
         apiUrl,
@@ -40,7 +42,7 @@ export const UseCallApiPerformance = () => {
 }
 
 export const UseCallApiSession = () => {
-    const apiUrl = `http://localhost:3000/user/12/average-sessions`;
+    const apiUrl = `http://localhost:3000/user/${USER_ID}/average-sessions`;
 
     const {data, error, isLoading} = useSWR(
         apiUrl,
