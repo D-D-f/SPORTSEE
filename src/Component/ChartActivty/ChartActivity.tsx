@@ -1,11 +1,9 @@
-import "./ChartActivity.css";
 import {UseCallApiActivity} from "../../Api/UseCallApi.ts";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import CustomLegend from "../../Custom/CustomLegend/CustomLegend.tsx";
 import CustomTickChart from "../../Custom/CustomTickChart/CustomTickChart.tsx";
 import CustomChartTooltip from "../../Custom/CustomChartTooltip/CustomChartTooltip.tsx";
 import {ActivityProps} from "../../Interface/InterfaceProps.ts";
-
 
 const ChartActivity = () => {
     const data: string | ActivityProps = UseCallApiActivity();
@@ -16,12 +14,12 @@ const ChartActivity = () => {
     }
 
     return (
-        <ResponsiveContainer width="100%" height={320} style={{marginTop: "30px"}}>
+        <ResponsiveContainer width="100%" height={300} style={{backgroundColor: "var(--backgroundGray"}}>
             <BarChart data={sessions} barGap={5} margin={{
-                top: 5,
+                top: 50,
                 right: 0,
                 left: 20,
-                bottom: 5,
+                bottom: 30,
             }}>
                 <Legend content={<CustomLegend /> } verticalAlign='top' align='right' iconType='circle' wrapperStyle={{marginTop: '-15px'}} formatter={(value) => <span style={{color: "var(--fontColorChart"}}>{value}</span>} />
                 <CartesianGrid strokeDasharray="4 4"/>

@@ -22,7 +22,7 @@ const LineChartSession = () => {
     }
 
     return (
-        <ResponsiveContainer width={"30%"} height={300} className='objectif-responsive'>
+        <ResponsiveContainer width={"30%"} height={250} className='objectif-responsive'>
             <LineChart data={sessions}
                        margin={{ top: 50, right: 10, left: 10, bottom: 20 }}
                        style={{backgroundColor: "var(--red)", borderRadius: "7px"}}

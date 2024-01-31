@@ -31,7 +31,7 @@ const Home = () => {
             <div className="containerChart d_flex">
                 <div className="firstChart">
                     <ChartActivity />
-                    <div className="d_flex justifyContentBetween" style={{marginTop: "50px"}}>
+                    <div className="d_flex justifyContentBetween secondChart" style={{marginTop: "50px"}}>
                         <LineChartSession />
                         <RadarChartPerformance />
                         <RadialBarChartObjective dataOriginal={data} />
