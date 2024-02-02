@@ -24,3 +24,9 @@ Vous travaillez en tant que développeur chez SportSee, une startup dédiée au 
 - Assurer la qualité des données d'une application
 - Développer des éléments graphiques avancés à l'aide de bibliothèques JavaScript
 - Interagir avec un service Web
+
+
+## Lancer le projet
+
+- Lancer la commande `pnpm install`
+- Lancer la commande `pnpm dev`
