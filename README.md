@@ -15,7 +15,7 @@ Vous travaillez en tant que développeur chez SportSee, une startup dédiée au 
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=css,figma,github,react" />
+    <img src="https://skillicons.dev/icons?i=react,css,figma,github" />
   </a>
 </p>
 
